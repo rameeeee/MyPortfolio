@@ -48,7 +48,7 @@
                   <a href="#project" class="link">PROJECTS</a>
                 </li>
                 <li class="item">
-                  <a href="/Contact/" class="link">Contact</a>
+                  <a href="#contact" class="link">Contact</a>
                 </li>
               </ul>
               <button class="btn_close">
@@ -1558,6 +1558,9 @@
           });
 
           $(window).scroll(function () {
+            
+
+            
             $contents.each(function () {
               if ($(this).offset().top - 77 <= $(window).scrollTop()) {
                 var idx = $(this).index();
@@ -1565,20 +1568,12 @@
                 $menu.eq(idx).addClass("on");
               } else if ($(this).offset().top <= $test) {
                 $menu.removeClass("on");
-              }
+              } 
             });
+            
 
             $contents.each(function () {
-              if ($(this).offset().top - 77 <= $(window).scrollTop()) {
-                var idx = $(this).index();
-                $menu.removeClass("on");
-                $menu.eq(idx).addClass("on");
-              } else if ($(this).offset().top <= $test) {
-                $menu.removeClass("on");
-              }
-            });
-            $contents.each(function () {
-              if ($(this).offset().top - 550 <= $(window).scrollTop()) {
+              if ($(this).offset().top - 580 <= $(window).scrollTop()) {
                 var idx = $(this).index();
                 $contents.removeClass("on");
                 $contents.eq(idx).addClass("on");
@@ -1586,15 +1581,20 @@
                 $contents.removeClass("on");
               }
             });
+
             if (
-              $(window).scrollTop() + $(window).height() ==
+              Math.ceil($(window).scrollTop() + $(window).height()) ==
               $(document).height()
             ) {
               var lastIdx = $menu.length - 1;
+              console.log(lastIdx);
               $menu.removeClass("on");
               $menu.eq(lastIdx).addClass("on");
             }
+
           });
+
+          
 
           $(window).scroll(function () {
             const eventTopHeight1 = $(".content_spot").height();
