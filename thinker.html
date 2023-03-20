@@ -126,8 +126,8 @@
                         교육 수료
                       </p>
                       <p class="info">
-                        <span class="date">2022.12~현재</span> React 교육
-                        수강중<br />
+                        <span class="date">2022.12~2023.03</span>
+                        React 교육 수료<br />
                         (이젠아카데미 컴퓨터학원 강남점)
                       </p>
                       <p class="info">
@@ -1131,7 +1131,6 @@
                     </li>
                   </ul>
                 </div>
-                <div class="info_box"></div>
                 <ul class="project_list one_content">
                   <li class="project_item n_shopping">
                     <!-- .open_btn을 클릭하면 .toggle_box에 .open 클래스 추가하고
@@ -1463,6 +1462,55 @@
                   </li>
                 </ul>
               </div>
+              <div class="project_box">
+                <h4 class="sub_title">리액트 실습</h4>
+                <div class="explain_box">
+                  <ul class="list">
+                    <li class="item">컴포넌트를 구분하여 제작</li>
+                  </ul>
+                </div>
+                <ul class="project_list one_content">
+                  <li class="project_item n_shopping">
+                    <!-- .open_btn을 클릭하면 .toggle_box에 .open 클래스 추가하고
+                                    toggle_box가 닫히면 .open클래스 삭제  -->
+                    <div class="toggle_box">
+                      <div class="subject">
+                        <p class="text">Todo List</p>
+                        <button class="open_btn" type="button">
+                          <span class="blind">자세히 보기</span>
+                        </button>
+                      </div>
+                      <div class="detail">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="scroll_box">
+                                <div class="img_wrap">
+                                  <img
+                                    src="./img/react/react_practice01.png"
+                                    alt="리액트로 만든 Todo List 페이지"
+                                  />
+                                </div>
+                              </div>
+                              <div class="text_info">
+                                <span>PC 화면</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="link_wrap">
+                          <a
+                            href="https://rameeeee.github.io/React_TodoApp/"
+                            target="_blank"
+                            >리액트 실습 페이지 바로가기</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="section_contact" id="contact">
@@ -1558,9 +1606,6 @@
           });
 
           $(window).scroll(function () {
-            
-
-            
             $contents.each(function () {
               if ($(this).offset().top - 77 <= $(window).scrollTop()) {
                 var idx = $(this).index();
@@ -1568,9 +1613,8 @@
                 $menu.eq(idx).addClass("on");
               } else if ($(this).offset().top <= $test) {
                 $menu.removeClass("on");
-              } 
+              }
             });
-            
 
             $contents.each(function () {
               if ($(this).offset().top - 580 <= $(window).scrollTop()) {
@@ -1591,10 +1635,7 @@
               $menu.removeClass("on");
               $menu.eq(lastIdx).addClass("on");
             }
-
           });
-
-          
 
           $(window).scroll(function () {
             const eventTopHeight1 = $(".content_spot").height();
